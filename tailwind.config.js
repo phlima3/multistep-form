@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
       lg: "1440px",
+      md: "1024px",
       sm: "375px",
     },
     colors: {
@@ -17,6 +21,15 @@ export default {
       "pastel-blue": "hsl(228, 100%, 84%)",
       "light-blue": "hsl(206, 94%, 87%)",
       "strawberry-red": "hsl(354, 84%, 57%)",
+    },
+    extend: {
+      fontFamily: {
+        sans: ["Ubuntu", ...fontFamily.sans],
+      },
+      backgroundImage: {
+        "desktop-sidebar": "url('/src/assets/images/bg-sidebar-desktop.svg')",
+        "mobile-sidebar": "url('/src/assets/images/bg-sidebar-mobile.svg')",
+      },
     },
   },
   plugins: [],

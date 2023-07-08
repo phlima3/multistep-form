@@ -1,0 +1,9 @@
+.sidebar {
+  background-image: url("/src/assets/images/bg-sidebar-desktop.svg");
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    background-image: url("/src/assets/images/bg-sidebar-mobile.svg");
+  }
+}
